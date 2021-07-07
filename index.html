@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        td {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td id="tr0" onclick=mark(0,0)></td>
+            <td id="tr1" onclick=mark(0,1)></td>
+            <td id="tr2" onclick=mark(0,2)></td>
+        </tr>
+        <tr>
+            <td id="tr3" onclick=mark(1,0)></td>
+            <td id="tr4" onclick=mark(1,1)></td>
+            <td id="tr5" onclick=mark(1,2)></td>
+        </tr>
+        <tr>
+            <td id="tr6" onclick=mark(2,0)></td>
+            <td id="tr7" onclick=mark(2,1)></td>
+            <td id="tr8" onclick=mark(2,2)></td>
+        </tr>
+    </table>
+    <p id="announce"></p>
+    <script src="index.js"></script>
+</body>
+</html>
