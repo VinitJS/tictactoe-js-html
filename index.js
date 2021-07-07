@@ -45,12 +45,12 @@ function mark(i, j) {
     refBoard[i][j].innerText) return;
     if(i < 0 || i > 2 || j < 0 || j > 2) throw Error("Invalid Input");
     if(playerTurn) {
-        refBoard[i][j].innerText = "X";
-        if(check(p1, i, j)) return document.getElementById('announce').innerText = "X won!"
+        refBoard[i][j].innerText = "💩";
+        if(check(p1, i, j)) return document.getElementById('announce').innerText = "💩 won!"
         playerTurn = !playerTurn;
     } else {
-        refBoard[i][j].innerText = "O";
-        if(check(p2, i, j)) return document.getElementById('announce').innerText = "O won!";
+        refBoard[i][j].innerText = "👅";
+        if(check(p2, i, j)) return document.getElementById('announce').innerText = "👅 won!";
         playerTurn = !playerTurn;
     }
     clickedCount++;
