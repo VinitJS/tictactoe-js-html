@@ -41,7 +41,8 @@ let playerTurn = true; // false: p2, true: p1
 let clickedCount = 0;
 
 function mark(i, j) {
-    if(document.getElementById('announce').innerText) return;
+    if(document.getElementById('announce').innerText ||
+    refBoard[i][j].innerText) return;
     if(i < 0 || i > 2 || j < 0 || j > 2) throw Error("Invalid Input");
     if(playerTurn) {
         refBoard[i][j].innerText = "X";
