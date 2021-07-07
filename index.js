@@ -10,13 +10,6 @@ for(let i=0; i<3; i++) {
     }
 }
 
-// LOGIC
-const magicBoard = [
-    [8, 1, 6],
-    [3, 5, 7],
-    [4, 9, 2]
-];
-
 // PLAYERS
 let playerCount = 0;
 
@@ -65,17 +58,17 @@ function mark(i, j) {
 
 // Magic Square
 function check(player, i, j) {
-    player.count[`r${i}`] += magicBoard[i][j];
-    if(player.count[`r${i}`] === 15) return true;
+    player.count[`r${i}`]++;
+    if(player.count[`r${i}`] === 3) return true;
 
-    player.count[`c${j}`] += magicBoard[i][j];
-    if(player.count[`c${j}`] === 15) return true;
+    player.count[`c${j}`]++;
+    if(player.count[`c${j}`] === 3) return true;
 
-    if(i === j) player.count.dt += magicBoard[i][j];
-    if(player.count.dt === 15) return true;
+    if(i === j) player.count.dt++;
+    if(player.count.dt === 3) return true;
 
-    if(i+j === 2) player.count.db += magicBoard[i][j];
-    if(player.count.db === 15) return true;
+    if(i+j === 2) player.count.db++;
+    if(player.count.db === 3) return true;
     
     return false;
 }
