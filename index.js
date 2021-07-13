@@ -50,14 +50,15 @@ function mark(i, j) {
     if(i < 0 || i > 2 || j < 0 || j > 2) throw Error("Invalid Input");
     
     const player = playerTurn ? p1 : p2;
+    
+    clickedCount++;
+    if(clickedCount > 8) document.getElementById('announce').innerText = "It's a draw!"
 
     refBoard[i][j].innerText = player.name;
     if(check(player, i, j)) document.getElementById('announce').innerText = `${player.name} won!`;
     
     playerTurn = !playerTurn;
     
-    clickedCount++;
-    if(clickedCount > 8) document.getElementById('announce').innerText = "It's a draw!"
 }
 
 function undo() {
