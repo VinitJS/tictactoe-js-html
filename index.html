@@ -20,17 +20,17 @@
             box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
             border-radius: 10px;
         }
-        #direction {
+        button {
             padding: 10px 15px;
             margin: 5px;
             border: none;
             border-radius: 5px;
             box-shadow: rgba(250, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
         }
-        #direction:hover {
+        button:hover {
             box-shadow: rgba(250, 250, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
         }
-        #direction:active {
+        button:active {
             box-shadow: rgba(250, 250, 250, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
         }
     </style>
@@ -54,7 +54,10 @@
         </tr>
     </table>
     <div>
-        <button id="direction" onclick=undo()>UNDO</button>
+        <button onclick=undo()>UNDO</button>
+    </div>
+    <div>
+        <button onclick=window.location.reload()>RESTART</button>
     </div>
     <p id="announce"></p>
     <script src="index.js"></script>
